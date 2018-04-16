@@ -484,8 +484,13 @@ $(document).ready(function() {
 		else
 			className="isle"
 
+		var tdText = String(seatNum);
+
+		if (seatNum == 0)
+			tdText = "";
+
 		$('<td data-seatnum=' + seatNum + '></td>').appendTo(seatingChartID + ' tr:last')
-			.html(seatNum)
+			.html(tdText)
 			.addClass(className);
 			//note: adding data with data() didn't seem to work....
 	}
